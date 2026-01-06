@@ -1,3 +1,145 @@
-what is the oop?
+1 ) what is the oop?
 --- oop is a method where a complex programme divided into smaller subparts each called object , it represent real world entity and it contains both data and methods.
 
+2 ) what are the four main oop concepts ?
+* encapsulation
+* polymorphism
+* inheritance 
+* abstraction 
+
+3 ) explain main oop concepts ? with examples 
+#############################################################################################################
+1️⃣ Encapsulation
+--------Meaning:
+Keeping data (variables) and methods together in one unit (class) and protecting data from direct access.
+
+Why we use it:
+  * Security 🔐
+  * Control how data is used
+
+Example (Java / general OOP):
+-------------------------------------------------
+class BankAccount {
+    private double balance;   // hidden data
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+-----------------------------------------------------
+
+🔹 balance cannot be accessed directly
+🔹 Must use methods → safe access
+
+📌 Real life example:
+ATM machine – you can withdraw money but can’t touch the bank’s internal data.
+#################################################################################################################
+
+2️⃣ Inheritance (Reusability)
+
+Meaning:
+One class can use data and methods of another class
+
+Why we use it:
+
+  * Code reuse ♻️
+  * Avoid duplication
+
+Example:
+-------------------------------------------
+class Animal {
+    void eat() {
+        System.out.println("Eating...");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking...");
+    }
+}
+---------------------------------------------
+🔹 Dog inherits eat() from Animal
+
+📌 Real life example:
+Child inherits traits from parents.(this makes hierachiel structure)
+#######################################################################################
+3️⃣ Polymorphism (Many Forms)
+
+Meaning:
+Same method name but different behavior.
+
+Why we use it:
+
+Flexibility
+
+Cleaner code
+
+Example:
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+
+🔹 Same method sound()
+🔹 Different output based on object
+
+📌 Real life example:
+“Start” button
+
+Car → starts engine
+
+Computer → starts OS
+#######################################################################################################
+
+4️⃣ Abstraction (Hide Complexity)
+
+Meaning:
+Showing only important details and hiding internal implementation.
+
+Why we use it:
+
+Reduce complexity
+
+Focus on what, not how
+
+Example:
+abstract class Vehicle {
+    abstract void move();
+}
+
+class Car extends Vehicle {
+    void move() {
+        System.out.println("Car moves on road");
+    }
+}
+
+
+🔹 User knows vehicle moves
+🔹 Doesn’t care how engine works
+
+📌 Real life example:
+Driving a car – you drive, but don’t need to know engine mechanics.
+#########################################################################################
+
+
+4 ) what is a class and what is an Oject ?
+-- class is a blueprint ,object is an instance of a class 
