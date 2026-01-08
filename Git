@@ -1,7 +1,34 @@
 -- what is Git ? 
+  --- Git is a tool that tracks and manage changes in the code 
+
 -- what is Github ?
+  -- Github is the platform that host repositories online and allow team collaboration
+
 -- Basic Git commands?
+
+  git status - 
+  git add .  -
+
+
+
+  
 -- what are the alternative tools we can use instead of Git ?
+  -- Git is a distributed version controll system .. so like Git we can use (DVCS) examples are Mercurial / Bazaar / Fossil ,, other 
+type is centralized version controll systems - subversion / perforce / CVS( concurrent versions system )
+
+
+
+
 -- what are the main steps to a commit ?
+  -- git status
+  -- git add .
+  -- git commit -m "commit message"
+  -- git push origin -u main
+
+
 -- Important of Git ?
+  -- version controlling
+  -- Team collaboration
+  -- Backup & safety 
+  -- Offline work 
 
