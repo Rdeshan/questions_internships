@@ -4,4 +4,130 @@ DBMS(Database Management System) - software that manages the database (this allo
 
 Database system - the combination of data, the DBMS and associated applications .
 
-Common database types -  Relational databases | No SQL database
+Common database types -  Relational databases | No SQL database | vector databases | cloud & autonomous databases
+
+######################################################################################33
+1️⃣ Vector Databases (වෙක්ටර් ඩේටාබේස්)
+👉 AI systems වලට අත්‍යවශ්‍ය Database type එකක්
+🔹 Vector Database කියන්නේ මොනවාද?
+
+Data (text, image, audio වගේ දේවල්)
+👉 numbers (vectors) ලෙස store කරන database එකක්.
+
+මේ vectors වලින් data එකේ meaning (අර්ථය / context) represent වෙනවා.
+
+🔹 සාමාන්‍ය Database vs Vector Database
+
+Normal Database (SQL / NoSQL):
+
+“apple” කියන word එක search කලොත්
+👉 exact match තියෙන records විතරයි.
+
+Vector Database:
+
+“apple” search කලොත්
+👉 “fruit”, “red fruit”, “healthy food” වගේ
+අර්ථයෙන් සමාන දේවල්ත් හොයාගන්න පුළුවන්.
+
+👉 මේකට කියන්නේ Semantic Search.
+
+🔹 AI වලට Vector DB වැදගත් ඇයි?
+
+Chatbots (ChatGPT වගේ)
+
+Recommendation systems
+
+Document search (PDF, notes)
+
+Image & voice recognition
+
+AI model එකට:
+
+“මේකට සම්බන්ධ data මොනවාද?”
+කියලා meaning-wise හොයාගන්න පුළුවන්.
+
+🔹 Example (simple)
+
+ඔයා AI chatbot එකක් හදනවා කියලා හිතන්න.
+
+User:
+
+“Invoice generate කරන එක explain කරන්න”
+
+Vector DB එක:
+
+Exact words නැති උනත්
+
+similar meaning තියෙන documents හොයාගෙන
+
+AI එකට context එක supply කරනවා.
+👉 ඒකෙන් AI answer එක smart & accurate වෙනවා.
+
+####################################################################################
+
+
+2️⃣ Cloud & Autonomous Databases
+👉 “Self-managing” Databases
+🔹 Autonomous Database කියන්නේ මොනවාද?
+
+Cloud වල run වෙන database
+
+Machine Learning (AI) use කරලා
+👉 database එක auto manage වෙනවා
+
+Human DBA කෙනෙක්:
+
+tuning
+security
+backups
+updates
+
+කියලා manually කරන වැඩ
+👉 database එකම කරගන්නවා.
+
+🔹 මොන දේවල් Auto වෙන්නේ?
+
+✔ Performance tuning (slow queries fix)
+✔ Automatic backups
+✔ Automatic security patches
+✔ Auto scaling (users වැඩි උනොත්)
+✔ Crash recovery
+
+🔹 Oracle Autonomous Database (Example)
+
+Oracle Autonomous DB:
+AI use කරලා
+Errors predict කරලා
+Problem එක එන්න කලින් fix කරනවා
+
+👉 DBA workload එක ඉතාම අඩු වෙනවා.
+
+🔹 Cloud Database කියන එකේ ලාභ
+
+Server buy කරන්න ඕන නෑ
+Maintenance team එකක් අවශ්‍ය නෑ
+Pay-as-you-use
+High security & reliability
+
+🔹 Use cases
+
+Enterprise systems
+Banking systems
+ERP systems
+Large web applications
+
+🧠 Simple Comparison
+Database Type                          	Main Purpose
+Vector Database	               |        AI & Semantic search
+Autonomous Database	           |        Auto-managed, cloud-based systems
+✨ Short exam-style summary (සිංහලෙන්)
+
+Vector Databases යනු data අර්ථය represent කරන numerical vectors 
+ලෙස store කර, AI systems වල semantic search සහ context retrieval සඳහා භාවිතා කරන databases වේ.
+Cloud & Autonomous Databases යනු machine learning භාවිතා කර tuning, security, backups වැනි 
+database management tasks ස්වයංක්‍රීයව සිදු කරන cloud-based databases වේ.
+
+
+
+
+
