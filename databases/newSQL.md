@@ -8,3 +8,35 @@ Phase 3 (Current 2026): Focused on AI-Native capabilities, where these databases
 
 
 **  NewSQL is a modern class of relational database management systems that bridges the gap between traditional SQL and NoSQL **
+In the old Relational databases - easy to manage data using SQL and data safe (ACID compilance) , but when traffic is high be slow 
+NoSQL - speed + scale( this can use by 100 thousand users ),  disadvantages are data are not safe and no sql 
+
+Main Qualities of NewSQL 
+
+  * Can write queries using SQL
+  * ACID properties ( data safe )
+  * Distributed system ( connect many serevers together and run )
+  * can handle thounds of users and transactions 
+
+
+Real world systems that use NewSQL :
+
+  * E- commerce systems
+  * Banking / Financiail systems
+  * cloud services
+  * large-scale web apps
+
+NewSQL database Examples :
+
+  * CockoachDB
+  * googleSpanner
+
+Short Sinhala summary (exam / note)
+
+NewSQL කියන්නේ SQL + ACID safety + NoSQL scale එකට ගත්ත modern relational database එකක්. High traffic applications වල fast, reliable data handling සඳහා භාවිතා කරනවා.
+
+
+
+
+  
+
