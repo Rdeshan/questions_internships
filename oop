@@ -13,6 +13,9 @@
 --------Meaning:
 Keeping data (variables) and methods together in one unit (class) and protecting data from direct access.
 
+In the encapsulation when we want to access to data we must use getters and setters. this is usefull for data security , future
+- updates and we can set validation or add so many rules to getter and setter 
+
 Why we use it:
   * Security 🔐
   * Control how data is used
