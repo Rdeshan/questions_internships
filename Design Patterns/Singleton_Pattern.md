@@ -18,12 +18,13 @@ If every file creates its own DB connection:
   * Slow performance
   * Possible crashes
 
+```
 // bad practice
 
 const db1 = createDBConnection();
 const db2 = createDBConnection();
 const db3 = createDBConnection();
-
+```
 ✅ Solution with Singleton
 
 You create ONE connection pool, and everyone uses the same one.
@@ -34,6 +35,7 @@ DB connection is created only once
 Same connection reused everywhere
 Controlled, efficient, safe
 
+```
 Example (Node.js style)
 
 class Database {
@@ -55,6 +57,7 @@ const db1 = new Database();
 const db2 = new Database();
 
 console.log(db1 === db2); // true ✅
+```
 
 
 ➡️ Both db1 and db2 use the SAME DB connection
@@ -78,22 +81,18 @@ Performance waste
 
 You want:
 
-One logger
-
-Same format
-
-Same file
-
-Same rules
+ * One logger
+ * Same format
+ * Same file
+ * Same rules
 
 How Singleton helps
 
-Central logging point
+  * Central logging point
+  * Consistent logs
+  * Easier debugging
 
-Consistent logs
-
-Easier debugging
-
+```
 Example
 class Logger {
   constructor() {
@@ -118,7 +117,7 @@ logger1.log("Server started");
 logger2.log("User logged in");
 
 console.log(logger1 === logger2); // true ✅
-
+```
 
 ➡️ All logs go to one logger
 
@@ -130,11 +129,8 @@ console.log(logger1 === logger2); // true ✅
 If config is loaded multiple times:
 
 Re-reading .env or config files
-
 Different values in different places
-
 Bugs in production
-
 Hard to change config
 
 ✅ Singleton Config Manager
@@ -143,14 +139,12 @@ Load config once, use everywhere.
 
 How Singleton helps
 
-One source of truth
+  * One source of truth
+  * Faster
+  * Safe
+  * Easy to manage
 
-Faster
-
-Safe
-
-Easy to manage
-
+```
 Example
 class Config {
   constructor() {
@@ -176,18 +170,7 @@ const config2 = new Config();
 
 console.log(config1.get("PORT")); // 3000
 console.log(config1 === config2); // true ✅
+```
 
 ###########################################################################
-
-public class BillPughSingleton {
-    private BillPughSingleton() {} // Private constructor
-
-    private static class SingletonHelper { // Static inner class
-        private static final BillPughSingleton INSTANCE = new BillPughSingleton();
-    }
-
-    public static BillPughSingleton getInstance() { // Public access method
-        return SingletonHelper.INSTANCE;
-    }
-}
 
