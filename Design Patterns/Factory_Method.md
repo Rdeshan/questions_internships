@@ -73,6 +73,19 @@ public class Main {
 Delivering cargo by road using a Truck 🚚
 Delivering cargo by sea using a Ship 🚢
 
+```
+
+the flow of above scenario happen (**            very important             **)
+            Step by step:   1 .TruckLogistics object created
+                            2 .planDelivery() called
+                            3 .createTransport() → returns Truck
+                            4 .deliver() → Truck delivers
+
+Factory method follows Open-close principle ( OCP ) that mean open for extensions , closed for modifications  
+
+**            Factory method does not hide everything it hides only product creation , not creator selection            **
+
+
 
 
 
