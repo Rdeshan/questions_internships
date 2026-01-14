@@ -47,6 +47,81 @@ public interface Subject {
 👉 Subject manages observers
 
 
+Step 3️⃣ Create ConcreteSubject (YouTube Channel)
+
+```
+import java.util.ArrayList;
+import java.util.List;
+
+public class YouTubeChannel implements Subject {
+
+    private List<Observer> subscribers = new ArrayList<>();
+    private String latestVideo;
+
+    @Override
+    public void subscribe(Observer observer) {
+        subscribers.add(observer);
+    }
+
+    @Override
+    public void unsubscribe(Observer observer) {
+        subscribers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (Observer observer : subscribers) {
+            observer.update(latestVideo);
+        }
+    }
+
+    // Business logic
+    public void uploadVideo(String title) {
+        this.latestVideo = title;
+        notifyObservers();
+    }
+}
+```
+
+📌 Important
+Subject does NOT know details of observers
+Only knows they have update() method
+
+
+Step 4️⃣ Create ConcreteObserver (Subscriber)
+
+```
+public class Subscriber implements Observer {
+
+    private String name;
+
+    public Subscriber(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void update(String videoTitle) {
+        System.out.println(name + " received notification: New video -> " + videoTitle);
+    }
+}
+```
+Step 5️⃣ Test everything (Main class)
+```
+public class Main {
+    public static void main(String[] args) {
+
+        YouTubeChannel channel = new YouTubeChannel();
+
+        Subscriber user1 = new Subscriber("Deshan");
+        Subscriber user2 = new Subscriber("Ravindu");
+
+        channel.subscribe(user1);
+        channel.subscribe(user2);
+
+        channel.uploadVideo("Observer Pattern Explained!");
+    }
+}
+
 
 
 
