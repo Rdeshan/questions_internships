@@ -62,3 +62,52 @@ Types of Adapter
 Class Adapter – Uses inheritance to adapt one interface to another.
 
 Object Adapter – Uses composition; holds an instance of Adaptee and delegates calls to it (more flexible, preferred in most cases).
+
+
+```
+// Target interface
+interface MediaPlayer {
+    void play(String audioType, String fileName);
+}
+
+// Adaptee class
+class AdvancedMediaPlayer {
+    void playVlc(String fileName) { System.out.println("Playing VLC: " + fileName); }
+    void playMp4(String fileName) { System.out.println("Playing MP4: " + fileName); }
+}
+
+// Adapter class
+class MediaAdapter implements MediaPlayer {
+    AdvancedMediaPlayer advancedMusicPlayer;
+
+    public MediaAdapter(String audioType) {
+        advancedMusicPlayer = new AdvancedMediaPlayer();
+    }
+
+    @Override
+    public void play(String audioType, String fileName) {
+        if(audioType.equalsIgnoreCase("vlc")) {
+            advancedMusicPlayer.playVlc(fileName);
+        } else if(audioType.equalsIgnoreCase("mp4")) {
+            advancedMusicPlayer.playMp4(fileName);
+        }
+    }
+}
+
+// Client
+class AudioPlayer implements MediaPlayer {
+    MediaAdapter mediaAdapter;
+
+    @Override
+    public void play(String audioType, String fileName) {
+        if(audioType.equalsIgnoreCase("mp3")) {
+            System.out.println("Playing MP3: " + fileName);
+        } else if(audioType.equalsIgnoreCase("vlc") || audioType.equalsIgnoreCase("mp4")) {
+            mediaAdapter = new MediaAdapter(audioType);
+            mediaAdapter.play(audioType, fileName);
+        } else {
+            System.out.println("Invalid media type: " + audioType);
+        }
+    }
+}
+```
