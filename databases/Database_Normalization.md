@@ -30,8 +30,21 @@ Step 1: 1NF (Atomic Values)
 Rule: Each column must have single values (no lists).
 ![1th_NF](../1NF.PNG)
 
-![1th_NF](../2nf.PNG)
 
-![1th_NF](../pp.PNG)
+Step 2: 2NF (Remove Partial Dependency)
+
+Rule: Every non-key attribute must depend on the whole primary key.
+Current primary key (composite) = (StudentID, Course)
+StudentName depends only on StudentID → partial dependency
+We separate it into two tables
+
+![2NF](../2nf.PNG)
+
+
+![3NF](../3NF.PNG)
+
+
+
+![Summary](../pp.PNG)
 
 
