@@ -22,6 +22,6 @@ table structures - (Read the full IBM article [here](https://www.ibm.com/think/t
 ### What are the normal forms of database normalization? ### 
 #### (0th NF / 1NF / 2NF / 3NF / BCNF / 4NF / 5NF / 6NF) ####
 
-![0th NF](../0NF.png)
+![0th NF](./0NF.png)
 
 
