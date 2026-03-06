@@ -26,3 +26,4 @@ table structures - (Read the full IBM article [here](https://www.ibm.com/think/t
 
 ![1th_NF](../1NF.PNG)
 
+![1th_NF](../2nf.PNG)
