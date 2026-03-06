@@ -22,8 +22,12 @@ table structures - (Read the full IBM article [here](https://www.ibm.com/think/t
 ### What are the normal forms of database normalization? ### 
 #### (0th NF / 1NF / 2NF / 3NF / BCNF / 4NF / 5NF / 6NF) ####
 
+0th NF table - plain table without doing nothing
 ![0th NF](../0NF.PNG)
 
+
+Step 1: 1NF (Atomic Values)
+Rule: Each column must have single values (no lists).
 ![1th_NF](../1NF.PNG)
 
 ![1th_NF](../2nf.PNG)
