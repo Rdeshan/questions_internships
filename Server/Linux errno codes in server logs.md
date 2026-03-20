@@ -8,5 +8,4 @@
 | 98   | EADDRINUSE  | Address already in use (port already taken)                 |
 | 101  | ENETUNREACH | Network unreachable (no route to host)                      |
 | 113  | EHOSTUNREACH| Host unreachable (remote server cannot be contacted)        |
-| 104  | ECONNRESET  | Connection reset by peer                                    |
-| 111  | ECONNREFUSED| Connection refused                                          |
+
